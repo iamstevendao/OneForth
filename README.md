@@ -8,8 +8,8 @@ Desktop client for everything you love
 ## Building and Debugging
 Clone the repository, install all dependencies and run the app:
 ```bash
-git clone https://github.com/iamstevendao/OneForth
-cd OneForth
+git clone https://github.com/iamstevendao/oneForth
+cd oneForth
 npm i && npm start
 ```
 
