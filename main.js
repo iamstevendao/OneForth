@@ -1,4 +1,5 @@
 const electron = require('electron')
+const path = require('path')
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -16,10 +17,11 @@ function createWindow() {
   win = new BrowserWindow({ width: width / 4, height: height, minWidth: 500 })
   //make the window on the right hand side of the screen
   win.setPosition(width - win.getSize()[0], 0);
+
   // and load the index.html of the app.
   win.loadURL(url.format({
-    pathname: "m.9gag.com",
-    protocol: 'http:',
+    pathname: path.join(__dirname, 'index.html'),
+    protocol: 'file:',
     slashes: true
   }))
 

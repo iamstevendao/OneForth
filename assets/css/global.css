@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+webview {
+  width: 100%;
+  height: 100%;
+}
+.indicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
