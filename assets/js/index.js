@@ -1,12 +1,14 @@
 const urls =
   {
     "9gag": "https://m.9gag.com/",
-    "whatsapp": "https://web.whatsapp.com/"
+    "whatsapp": "https://web.whatsapp.com/",
+    "messenger": "https://messenger.com/"
   }
 
 onload = () => {
   const webview = document.querySelector('webview')
   const indicator = document.querySelector('.indicator')
+  let target = "9gag";
 
   const loadstart = () => {
     indicator.innerText = 'loading...'
@@ -14,6 +16,9 @@ onload = () => {
 
   const loadstop = () => {
     indicator.innerText = ''
+    if (target == "whatsapp") {
+      webview.setZoomLevel(-1)
+    } else webview.setZoomLevel(0);
   }
 
   webview.addEventListener('did-start-loading', loadstart)
@@ -22,13 +27,12 @@ onload = () => {
 
   document.body.addEventListener('click', function (event) {
     if (event.target.dataset.section) {
-      console.log("hello");
       handleSectionTrigger(event)
     }
   })
 
   function handleSectionTrigger(event) {
-    let target = event.target.dataset.section;
+    target = event.target.dataset.section;
     webview.loadURL(urls[target]);
   }
 }

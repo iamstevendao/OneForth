@@ -3,22 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hello World!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Forth</title>
   <link rel="stylesheet" href="./assets/css/global.css">
 </head>
 
 <body>
   <nav>
-    <ul>
-      <li><button data-section="9gag">9gag</button></li>
-      <li><button data-section="whatsapp">whatsapp</button></li>
+    <ul class="tabs">
+      <li>
+        <h4 class="tab" data-section="9gag">9gag</h4>
+      </li>
+      <li>
+        <h4 class="tab" data-section="whatsapp">whatsapp</h4>
+      </li>
+      <li>
+        <h4 class="tab" data-section="messenger">Messenger</h4>
+      </li>
     </ul>
   </nav>
   <main class="content">
     <webview src="https://www.github.com/">
     </webview>
   </main>
-  <footer class="indicator"></footer>
+  <!-- <footer class="indicator"></footer> -->
 </body>
 
 <script>
